@@ -1,6 +1,4 @@
-FROM rust:1.64-alpine3.16
+FROM rust:1.64-bullseye
 
-RUN apk update \
-  && apk add --no-cache ca-certificates tzdata \
-  opencv-dev musl-dev clang-dev clang-libs llvm \
-  && rm -rf /var/cache/apk/*
+RUN apt update \
+  && apt -y install --no-install-recommends libopencv-dev clang libclang-dev 
