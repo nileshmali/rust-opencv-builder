@@ -1,2 +1,2 @@
-# rust-ci
-Rust docker image for CI
+# rust-musl-opencv-builder
+Rust+OpenCV builder image for musl on alpine
