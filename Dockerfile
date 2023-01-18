@@ -1,4 +1,4 @@
-FROM rust:1.66.0-bullseye
+FROM rust:1.66.1-bullseye
 
 RUN apt-get update \
   && apt-get -y install --no-install-recommends libopencv-dev clang libclang-dev libprotobuf-dev protobuf-compiler \
