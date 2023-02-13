@@ -1,4 +1,4 @@
-FROM rust:1.67.0-bullseye
+FROM rust:1.67.1-bullseye
 
 RUN apt-get update \
   && apt-get upgrade -y \
