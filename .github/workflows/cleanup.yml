@@ -24,6 +24,3 @@ jobs:
           container: rust-opencv-builder
           dry-run: false # Dry-run first, then change to `false`
           prune-untagged: true
-          keep-last: 2
-          prune-tags-regexes: |
-            ^sha256-
