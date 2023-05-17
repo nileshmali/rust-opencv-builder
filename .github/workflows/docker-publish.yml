@@ -16,8 +16,6 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-  STATIC_IMAGE_NAME: ${{ github.repository }}-static
 
 jobs:
   build:
@@ -27,9 +25,9 @@ jobs:
       matrix:
         include:
           - dockerfile: ./Dockerfile
-            image: ${REGISTRY}/${IMAGE_NAME}
+            image: ghcr.io/${{ github.repository }}
           - dockerfile: ./Dockerfile.static
-            image: ${REGISTRY}/${STATIC_IMAGE_NAME}  
+            image: ghcr.io/${{ github.repository }}-static
     permissions:
       contents: read
       packages: write
