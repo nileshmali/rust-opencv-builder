@@ -2,6 +2,7 @@ FROM rust:1.69.0-bullseye
 
 ARG OPENCV_VERSION="4.7.0"
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+ENV OPENCV_LINK_LIBS="opencv_highgui,opencv_objdetect,opencv_dnn,opencv_calib3d,opencv_features2d,opencv_stitching,opencv_flann,opencv_videoio,opencv_video,opencv_ml,opencv_imgcodecs,opencv_imgproc,opencv_core,libittnotify,libtbb,liblibwebp,liblibtiff,liblibjpeg-turbo,liblibpng,liblibopenjp2,libippiw,libippicv,liblibprotobuf,libquirc,libzlib"
 
 RUN rustup component add clippy && rustup component add rustfmt 
 
@@ -9,7 +10,7 @@ RUN cargo install cargo-chef --locked && rm -rf "$CARGO_HOME"/registry/
 
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get -y install --no-install-recommends libjpeg-turbo clang libclang-dev build-essential cmake nasm libprotobuf-dev protobuf-compiler python3-numpy \
+  && apt-get -y install --no-install-recommends clang libclang-dev build-essential cmake nasm libprotobuf-dev protobuf-compiler python3-numpy \
   && apt-get --purge autoremove -y \
   && rm -rf /var/lib/apt/lists/*
 
