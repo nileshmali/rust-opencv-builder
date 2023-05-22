@@ -9,7 +9,7 @@ RUN cargo install cargo-chef --locked && rm -rf "$CARGO_HOME"/registry/
 
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get -y install --no-install-recommends clang build-essential cmake nasm libprotobuf-dev protobuf-compiler python3-numpy \
+  && apt-get -y install --no-install-recommends clang libclang-dev build-essential cmake nasm libprotobuf-dev protobuf-compiler python3-numpy \
   && apt-get --purge autoremove -y \
   && rm -rf /var/lib/apt/lists/*
 
