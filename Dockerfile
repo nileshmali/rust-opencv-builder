@@ -1,4 +1,4 @@
-FROM rust:1.72.1-bullseye
+FROM rust:1.72.1-bookworm
 
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 
