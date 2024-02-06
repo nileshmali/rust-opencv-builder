@@ -8,7 +8,7 @@ RUN rustup component add clippy && rustup component add rustfmt
 
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get -y install --no-install-recommends clang libclang-dev build-essential cmake nasm libprotobuf-dev protobuf-compiler python3-numpy sccache \
+  && apt-get -y install --no-install-recommends clang libclang-dev build-essential cmake nasm libprotobuf-dev protobuf-compiler python3-numpy docker.io \
   && apt-get --purge autoremove -y \
   && rm -rf /var/lib/apt/lists/*
 
