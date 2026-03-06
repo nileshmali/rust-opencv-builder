@@ -1,4 +1,4 @@
-FROM rust:1.93.1-bookworm
+FROM rust:1.94.0-bookworm
 
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 
