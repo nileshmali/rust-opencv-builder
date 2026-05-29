@@ -1,4 +1,4 @@
-FROM rust:1.95.0-trixie
+FROM rust:1.96.0-trixie
 
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 
